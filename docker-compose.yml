@@ -11,7 +11,7 @@ services:
     environment:
       - DEBUG=0
       - DJANGO_SETTINGS_MODULE=config.settings
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+      - DATABASE_URL=postgresql://postgres:jRaETciQWBgyBRWTYezlyVYdQjhlJcDG@centerbeam.proxy.rlwy.net:30764/railway
     depends_on:
       - db
 
@@ -20,9 +20,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=railway
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=jRaETciQWBgyBRWTYezlyVYdQjhlJcDG
 
 volumes:
   postgres_data:

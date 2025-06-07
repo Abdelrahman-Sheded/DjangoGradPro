@@ -1,0 +1,197 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "hiring", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "hiring", "model": "chatmessage" }
+  },
+  {
+    "model": "hiring.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$LhpLwNUy4t0GEio2LUtCsg$SvFLUmG1xgWVQ5VGR2Ppl2U+W7FN8e7P1jWxSBLk9sM=",
+      "last_login": "2025-05-30T17:20:14.899Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-05-30T17:00:27.876Z",
+      "is_admin": false,
+      "is_recruiter": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "hiring.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$cNgWIacMi9l7jg0kvjzGmY$jo34gCY+ihnWBKjGC3r4vu30dnePBtFtunrbYhyQ33Y=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ramadan",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-05-30T17:01:41Z",
+      "is_admin": false,
+      "is_recruiter": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "hiring.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$KZsHhV8G6MViESMBSeJtGa$7yelVfyiIV2Ot72tAi4xtiSVV9pI91IsdOf8U/nxH+A=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "shahed",
+      "first_name": "a",
+      "last_name": "b",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-05-30T17:18:04Z",
+      "is_admin": false,
+      "is_recruiter": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "message": "hello world",
+      "sender": "user",
+      "timestamp": "2025-05-30T17:16:33.283Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "message": "Hello! How can I assist you today with the CV candidates for the Junior DevOps Engineer position?",
+      "sender": "model",
+      "timestamp": "2025-05-30T17:16:34.823Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "message": "top 1 candidate",
+      "sender": "user",
+      "timestamp": "2025-05-30T17:17:19.855Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "message": "Candidate 1, Yahia Mohamed, is a strong match for the Junior DevOps Engineer position. With a Bachelor's degree in Computer Science and relevant experience in DevOps roles, Yahia demonstrates a solid foundation for the position. He has proficiency in scripting languages like Python and Bash, experience with CI/CD tools like Jenkins, and knowledge of containerization technologies like Docker and Kubernetes. Additionally, Yahia shows strong problem-solving skills, excellent communication abilities, and a willingness to learn and adapt to new technologies. His hands-on experience in managing server infrastructure, automating tasks, and deploying applications align well with the job requirements.\n\nCandidate 2, Ahmed Sdik, also presents a good fit for the Junior DevOps Engineer role. With a Bachelor's degree in Electrical Power Automation Engineering and internship experience in DevOps, Ahmed has a solid educational background and practical exposure to DevOps principles. He has hands-on experience with tools like Jenkins, Kubernetes, and Terraform, showcasing his technical skills. Ahmed's focus on CI/CD automation and cloud deployment aligns well with the job requirements. His experience in implementing CI/CD pipelines and working with Kubernetes for container orchestration adds value to his profile.\n\nOverall, both candidates exhibit strong potential for the Junior DevOps Engineer position. However, based on the available information, Candidate 1, Yahia Mohamed, appears to be the slightly better match. His comprehensive experience in managing server infrastructure, automating tasks, and applying DevOps principles in real-world projects gives him a slight edge. Additionally, Yahia's diverse technical skills and proactive approach to learning and innovation make him a compelling candidate for the role.",
+      "sender": "model",
+      "timestamp": "2025-05-30T17:17:25.362Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 6,
+    "fields": {
+      "user": 3,
+      "message": "candidate no. 3",
+      "sender": "user",
+      "timestamp": "2025-05-30T17:18:35.719Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 7,
+    "fields": {
+      "user": 3,
+      "message": "Candidate 3, Mohamed Abdulrahim Marioud, is a DevOps Engineer with a strong foundation in cloud computing, infrastructure automation, and DevOps methodologies. He has experience optimizing software development and deployment processes through CI/CD pipelines and infrastructure management tools like Docker and Kubernetes. Mohamed has worked on enhancing scalability and efficiency through automation and has a good understanding of cloud platforms like AWS and Azure. His experience in optimizing CI/CD pipelines and infrastructure management tools align well with the requirements for a Junior DevOps Engineer.\n\nIn comparison, Candidate 10, Abdelrahman Ahmed Elsaye, also demonstrates a solid background in DevOps, particularly in Linux administration, containerization, infrastructure as code, and CI/CD pipelines. His experience with technologies like Jenkins, SonarQube, Terraform, and Kubernetes showcases his proficiency in automation and deployment processes. Abdelrahman's project experience in setting up end-to-end CI/CD pipelines and deploying applications using Docker and Kubernetes highlights his practical skills in the DevOps domain.\n\nBoth candidates exhibit a good understanding of DevOps principles, cloud technologies, and automation tools. Mohamed's experience with optimizing software development and deployment processes may give him a slight edge in terms of practical application. On the other hand, Abdelrahman's project experience in setting up CI/CD pipelines and deploying applications demonstrates hands-on skills that are directly relevant to the role. Overall, both candidates show promise for the Junior DevOps Engineer position, with Mohamed's optimization experience and Abdelrahman's practical project work making them strong contenders for the role.",
+      "sender": "model",
+      "timestamp": "2025-05-30T17:18:41.726Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "message": "john",
+      "sender": "user",
+      "timestamp": "2025-05-31T08:15:31.732Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "message": "Candidate 1 has a strong background in Computer Science with a Bachelor's degree and relevant experience as a DevOps Engineer. They have proficiency in scripting languages like Python and Bash, experience with CI/CD tools like Jenkins, and knowledge of containerization technologies like Docker and Kubernetes. Additionally, they have worked on various projects related to DevOps practices and have completed relevant workshops and training programs.\n\nCandidate 2 also has a Bachelor's degree in Engineering and internship experience as a DevOps trainee. They have worked with Jenkins, Kubernetes, and Terraform to automate CI/CD pipelines and manage cloud infrastructure. Their experience with DevOps projects and tools aligns well with the job requirements.\n\nIn comparing the two candidates, Candidate 1 appears to have a more extensive background in DevOps practices, with hands-on experience in managing server infrastructure, automating tasks, and working with various tools and technologies. Their detailed project descriptions and technical skills showcase a strong fit for the Junior DevOps Engineer role. Candidate 2, while also having relevant experience and skills, may have a slightly less comprehensive background in DevOps based on the information provided.\n\nOverall, Candidate 1 seems to be the better match for the Junior DevOps Engineer position due to their in-depth experience, technical skills, and project involvement that directly align with the job requirements.",
+      "sender": "model",
+      "timestamp": "2025-05-31T08:15:35.582Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 10,
+    "fields": {
+      "user": 1,
+      "message": "top 3",
+      "sender": "user",
+      "timestamp": "2025-05-31T08:49:51.085Z"
+    }
+  },
+  {
+    "model": "hiring.chatmessage",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "message": "Based on the job requirements for a Junior DevOps Engineer, let's analyze the top 3 candidates:\n\nCandidate 1: Yahia Mohamed\n- Education: Bachelor's degree in Computer Science with a major in Computer Science.\n- Experience: Currently working as a DevOps Engineer at Kortobaa Integrate Solution.\n- Technical Skills: Proficient in scripting languages like bash, Python, and Docker. Experience with CI/CD tools like Jenkins and GitHub Actions.\n- Soft Skills: Strong problem-solving skills, excellent communication abilities, and a willingness to learn new technologies.\n- Additional Qualifications: Completed various workshops and training programs related to DevOps principles and tools.\n\nCandidate 2: Ahmed Sdik\n- Education: Bachelor's degree in Electrical Power Automation Engineering.\n- Experience: DevOps trainee at Digital Egypt Pioneers Initiative, focusing on Jenkins, Kubernetes, and Terraform.\n- Technical Skills: Experience with Jenkins, Kubernetes, Docker, and Terraform. Familiarity with CI/CD automation and cloud deployment.\n- Soft Skills: Not explicitly mentioned in the CV.\n- Additional Qualifications: Completed a project on CI/CD automation for an e-commerce web application.\n\nCandidate 3: Mohamed Abdulrahim Marioud\n- Education: Completed a 4-month DevOps Automation internship at NTI Smart Village.\n- Experience: Optimized software development and deployment automation using CI/CD pipelines and infrastructure management tools like Docker and Kubernetes.\n- Technical Skills: Proficient in system administration, Python, networking, version control with Git, and CI/CD tools like Jenkins.\n- Soft Skills: Strong problem-solving skills, good communication, and a collaborative mindset.\n- Additional Qualifications: Completed courses in cloud computing, AWS, and DevOps principles.\n\nOverall, all three candidates have relevant educational backgrounds and some experience in DevOps-related roles. However, Candidate 3, Mohamed Abdulrahim Marioud, seems to have a more comprehensive skill set that aligns closely with the job requirements. With experience in optimizing software development processes, strong technical skills, and a good understanding of cloud platforms and infrastructure automation, Candidate 3 appears to be the best match for the Junior DevOps Engineer position.",
+      "sender": "model",
+      "timestamp": "2025-05-31T08:49:57.084Z"
+    }
+  }
+]
