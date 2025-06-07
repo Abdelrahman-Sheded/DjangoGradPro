@@ -167,7 +167,10 @@ LOGGING = {
     },
 }
 
-# Add security settings for production
+# Tell Django to trust Railway's proxy headers
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Secure settings (already correct, only apply if not DEBUG)
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
