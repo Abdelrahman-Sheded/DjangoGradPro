@@ -24,6 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('hiring.urls')),
     path('api/', include('hiring.urls')),
-    path('rag-query/', views.rag_query, name='rag-query'),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]

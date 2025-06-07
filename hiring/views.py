@@ -1,40 +1,40 @@
-from rest_framework import generics, viewsets
-from rest_framework.permissions import IsAuthenticated
-from .models import  User, ChatHistory
-from .serializers import  UserSerializer, ChatHistorySerializer
-from django.http import HttpResponse, JsonResponse
-import httpx
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from .models import User, ChatMessage
+from .serializers import UserSerializer, ChatMessageSerializer
+from django.http import HttpResponse
 from .permissions import IsAdminUser
+import logging
 
-
+logger = logging.getLogger(__name__)
 
 def home(request):
     return HttpResponse("Welcome to Hiring App!")
-
-async def rag_query(request):
-    async with httpx.AsyncClient() as client:
-        response = await client.post(
-            "http://localhost:8001/generate",
-            json={"text": "Hello RAG!"}
-        )
-    return JsonResponse(response.json())
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
     def get_permissions(self):
-        if self.action in ['create', 'destroy']:
+        if self.action == 'create':
+            return [AllowAny()]  
+        if self.action in ['destroy']:
             return [IsAuthenticated(), IsAdminUser()]
         return [IsAuthenticated()]
 
-class ChatHistoryViewSet(viewsets.ModelViewSet):
-    queryset = ChatHistory.objects.all()
-    serializer_class = ChatHistorySerializer
+class ChatMessageViewSet(viewsets.ModelViewSet):
+    serializer_class = ChatMessageSerializer
     permission_classes = [IsAuthenticated]
 
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
     def get_queryset(self):
-        return ChatHistory.objects.filter(user=self.request.user)
+        return ChatMessage.objects.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        logger.info(f"Creating message: {serializer.validated_data}")
+        message = serializer.save(user=self.request.user)
+        logger.info(f"Message created: {message.id}")
+        return message
+
+    def create(self, request, *args, **kwargs):
+        logger.info(f"Received create request: {request.data}")
+        return super().create(request, *args, **kwargs)
