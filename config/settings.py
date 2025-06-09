@@ -138,7 +138,7 @@ CORS_ALLOW_METHODS = os.environ.get('DJANGO_CORS_ALLOW_METHODS', 'GET,POST,PUT,P
 CORS_ALLOW_HEADERS = os.environ.get('DJANGO_CORS_ALLOW_HEADERS', 'Content-Type,Authorization,X-CSRFToken,Origin,Accept,X-Requested-With').split(',')
 
 # CSRF settings
-CSRF_TRUSTED_ORIGINS = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '').split(',')
+CSRF_TRUSTED_ORIGINS = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', 'http://localhost:3000,https://graduation-project-iokg.vercel.app,https://djangogradpro-production.up.railway.app').split(',')
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
